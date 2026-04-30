@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Caveat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Caveat', cursive;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Green-forward palette */
+    --background: 120 20% 97%;       /* very soft sage-white */
+    --foreground: 140 30% 12%;       /* deep forest green */
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 12%;
+    --primary: 148 60% 36%;          /* rich sage-green #24966A style */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 18% 88%;
+    --secondary-foreground: 140 30% 12%;
+    --muted: 120 14% 93%;
+    --muted-foreground: 140 15% 42%;
+    --accent: 85 50% 48%;            /* lime-green accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 14% 84%;
+    --input: 120 14% 90%;
+    --ring: 148 60% 36%;
+    --radius: 1.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body {
+    @apply bg-background text-foreground font-body;
+    background-color: #F4FAF5;
+  }
+}
+
+/* ── Palette tokens ── */
+:root {
+  --green-dark:   #1A5C3A;
+  --green-mid:    #2E8B57;
+  --green-bright: #3CB371;
+  --green-light:  #A8D5B5;
+  --green-pale:   #E8F5EC;
+  --green-wash:   #F4FAF5;
+  --amber:        #F5A623;
+  --amber-light:  #FFD166;
+  --cream:        #FDFCF8;
+  --ink:          #1A3028;
+}
+
+/* ── Button styles ── */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 56px; padding: 0 32px;
+  border-radius: 1.5rem;
+  background: var(--green-mid);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 800; font-size: 16px;
+  border: 2.5px solid var(--green-dark);
+  box-shadow: 4px 4px 0px var(--green-dark);
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 6px 6px 0px var(--green-dark); }
+.btn-primary:active { transform: translateY(1px); box-shadow: 2px 2px 0px var(--green-dark); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 56px; padding: 0 32px;
+  border-radius: 1.5rem;
+  background: transparent;
+  color: var(--green-dark);
+  font-family: var(--font-body);
+  font-weight: 800; font-size: 16px;
+  border: 2.5px dashed var(--green-mid);
+  transition: background 0.15s;
+  cursor: pointer; text-decoration: none;
+}
+.btn-outline:hover { background: var(--green-pale); }
+
+.btn-amber {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 56px; padding: 0 32px;
+  border-radius: 1.5rem;
+  background: var(--amber);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 800; font-size: 16px;
+  border: 2.5px solid #D4891A;
+  box-shadow: 4px 4px 0px #D4891A;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer; text-decoration: none;
+}
+.btn-amber:hover { transform: translateY(-2px); box-shadow: 6px 6px 0px #D4891A; }
+.btn-amber:active { transform: translateY(1px); box-shadow: 2px 2px 0px #D4891A; }
+
+/* ── Card ── */
+.chalk-card {
+  background: #fff;
+  border: 2.5px solid var(--green-light);
+  border-radius: 1.75rem;
+  box-shadow: 4px 4px 0px var(--green-light);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.chalk-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 0px var(--green-mid);
+  border-color: var(--green-mid);
+}
+
+/* ── Dashed divider ── */
+.dash-divider { border-top: 2px dashed var(--green-light); }
+
+/* ── squiggle underline ── */
+.squiggle-green {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='8'%3E%3Cpath d='M0 4 Q10 1 20 4 Q30 7 40 4 Q50 1 60 4 Q70 7 80 4' stroke='%232E8B57' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom 0px left 0;
+  background-size: 80px 8px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Testimonial",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "role": {
+      "type": "string",
+      "title": "Role (e.g. Parent, Student)"
+    },
+    "content": {
+      "type": "string",
+      "title": "Testimonial Text"
+    },
+    "featured": {
+      "type": "boolean",
+      "title": "Show on Home Page"
+    }
+  },
+  "required": [
+    "name",
+    "content"
+  ]
+}

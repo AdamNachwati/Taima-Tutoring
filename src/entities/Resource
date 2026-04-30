@@ -1,0 +1,89 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "long_description": {
+      "type": "string",
+      "title": "Full Description"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject",
+      "enum": [
+        "Math",
+        "Science",
+        "Math & Science"
+      ]
+    },
+    "grade": {
+      "type": "string",
+      "title": "Grade / Level"
+    },
+    "price": {
+      "type": "number",
+      "title": "Price (CAD)"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "title": "Thumbnail Image URL"
+    },
+    "preview_url": {
+      "type": "string",
+      "title": "Preview Image URL"
+    },
+    "file_url": {
+      "type": "string",
+      "title": "Downloadable File URL"
+    },
+    "what_is_included": {
+      "type": "string",
+      "title": "What's Included"
+    },
+    "who_is_it_for": {
+      "type": "string",
+      "title": "Who Is It For"
+    },
+    "page_count": {
+      "type": "number",
+      "title": "Page Count"
+    },
+    "format": {
+      "type": "string",
+      "title": "File Format",
+      "enum": [
+        "PDF",
+        "Google Slides",
+        "Word Document",
+        "Other"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "title": "Featured on Home Page"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "published",
+        "draft"
+      ],
+      "default": "published"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "subject",
+    "grade",
+    "price"
+  ]
+}

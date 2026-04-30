@@ -1,0 +1,55 @@
+{
+  "name": "TutoringInquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Parent / Student Name"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone Number"
+    },
+    "grade": {
+      "type": "string",
+      "title": "Grade Level"
+    },
+    "subject": {
+      "type": "string",
+      "title": "Subject"
+    },
+    "goals": {
+      "type": "string",
+      "title": "Goals / What They Need Help With"
+    },
+    "availability": {
+      "type": "string",
+      "title": "Availability"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "new",
+        "contacted",
+        "booked",
+        "archived"
+      ],
+      "default": "new"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Admin Notes"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "subject",
+    "grade"
+  ]
+}
